@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "test-functions"
+client_id = "c2dc92b6cd06327c17c8557cc7b648e8"
+application_url = "https://mp-urge-formatting-seniors.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://mp-urge-formatting-seniors.trycloudflare.com/auth/callback",
+  "https://mp-urge-formatting-seniors.trycloudflare.com/auth/shopify/callback",
+  "https://mp-urge-formatting-seniors.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "jameshagood.myshopify.com"
