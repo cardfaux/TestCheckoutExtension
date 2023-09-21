@@ -1,7 +1,19 @@
 query Input {
   cart {
-    lines {
-      quantity
+    buyerIdentity {
+      customer {
+        numberOfOrders
+        hasAnyTag(tags: ["new_one", "new_james"])
+        hasTags(tags: ["new", "new_james"]) {
+          tag
+          hasTag
+        }
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
     }
   }
 }
